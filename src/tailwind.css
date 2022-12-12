@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .keys {
+    @apply text-stone-400 list-none uppercase cursor-pointer relative select-none;
+  }
+  .white-keys {
+    @apply w-[70px] h-[230px] bg-gradient-to-b from-white to-stone-300 rounded-[8px] border border-solid border-black active:bg-gradient-to-b active:from-white active:to-stone-400;
+  }
+  .black-keys {
+    @apply w-[44px] h-[140px] bg-gradient-to-b from-stone-700 to-stone-900 rounded-b-[5px] mx-[-22px] z-[2] active:bg-gradient-to-b active:from-stone-700 active:to-black;
+  }
+  .keys-letters {
+    @apply absolute bottom-[20px] w-full text-center text-[1.13rem] text-stone-500;
+  }
+}
+
+/* class for hiding keys letters in the PIANO */
+.hide {
+  display: none;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}

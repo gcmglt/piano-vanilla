@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="/favicon.svg" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <title>PIANO (desktop only)</title>
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com" />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap"
+      rel="stylesheet" />
+  </head>
+  <body class="font-montserrat flex flex-col items-center justify-center min-h-screen bg-stone-200">
+    <div class="bg-stone-900 w-[780px] rounded-[20px] py-[35px] px-[40px]">
+      <header class="text-stone-400 flex items-center justify-between font-bold">
+        <div class="flex flex-col items-center justify-center">
+          <h2 class="text-[1.4rem]">TypeScript PIANO</h2>
+          <h2 class="text-[1rem]">(desktop only)</h2>
+        </div>
+
+        <!-- volume slider -->
+        <div class="flex items-center">
+          <span class="font-medium mr-[15px] text-[1.10rem]">Volume</span>
+          <input
+            class="accent-white outline-none"
+            id="volume-slider"
+            type="range"
+            min="0"
+            max="1"
+            value="0.8"
+            step="any" />
+        </div>
+
+        <!-- show/hide keys letters -->
+        <div class="flex items-center">
+          <span class="font-medium mr-[15px]">Show Keys</span>
+          <input
+            class="relative appearance-none outline-none w-[60px] h-[30px] bg-stone-700 rounded-[30px] before:content-[''] before:absolute before:bg-stone-500 before:w-[20px] before:h-[20px] before:rounded-[30px] before:top-[50%] before:left-[5px] before:translate-y-[-50%] before:ease before:duration-300 checked:before:left-[35px] checked:before:bg-white"
+            id="keys-checkbox"
+            type="checkbox"
+            checked />
+        </div>
+      </header>
+
+      <!-- PIANO -->
+      <ul class="flex mt-[40px]">
+        <li
+          class="keys white-keys"
+          data-key="a">
+          <span class="keys-letters">a</span>
+        </li>
+        <li
+          class="keys black-keys"
+          data-key="w">
+          <span class="keys-letters">w</span>
+        </li>
+        <li
+          class="keys white-keys"
+          data-key="s">
+          <span class="keys-letters">s</span>
+        </li>
+        <li
+          class="keys black-keys"
+          data-key="e">
+          <span class="keys-letters">e</span>
+        </li>
+        <li
+          class="keys white-keys"
+          data-key="d">
+          <span class="keys-letters">d</span>
+        </li>
+        <li
+          class="keys white-keys"
+          data-key="f">
+          <span class="keys-letters">f</span>
+        </li>
+        <li
+          class="keys black-keys"
+          data-key="t">
+          <span class="keys-letters">t</span>
+        </li>
+        <li
+          class="keys white-keys"
+          data-key="g">
+          <span class="keys-letters">g</span>
+        </li>
+        <li
+          class="keys black-keys"
+          data-key="y">
+          <span class="keys-letters">y</span>
+        </li>
+        <li
+          class="keys white-keys"
+          data-key="h">
+          <span class="keys-letters">h</span>
+        </li>
+        <li
+          class="keys black-keys"
+          data-key="u">
+          <span class="keys-letters">u</span>
+        </li>
+        <li
+          class="keys white-keys"
+          data-key="j">
+          <span class="keys-letters">j</span>
+        </li>
+        <li
+          class="keys white-keys"
+          data-key="k">
+          <span class="keys-letters">k</span>
+        </li>
+        <li
+          class="keys black-keys"
+          data-key="o">
+          <span class="keys-letters">o</span>
+        </li>
+        <li
+          class="keys white-keys"
+          data-key="l">
+          <span class="keys-letters">l</span>
+        </li>
+        <li
+          class="keys black-keys"
+          data-key="p">
+          <span class="keys-letters">p</span>
+        </li>
+        <li
+          class="keys white-keys"
+          data-key=";">
+          <span class="keys-letters">;</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- footer section updated with JS -->
+    <section
+      class="absolute bottom-0"
+      id="footer"></section>
+
+    <script
+      defer
+      type="module"
+      src="./src/main.ts"></script>
+  </body>
+</html>
